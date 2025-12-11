@@ -1,0 +1,140 @@
+/* src/styles/addpet.css */
+
+.add-pet-page {
+  max-width: 700px;
+  margin: 3rem auto;
+  background: linear-gradient(145deg, #ffffff, #f5f5f7);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.add-pet-page h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #4f46e5;
+}
+
+.add-pet-form label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #374151;
+}
+
+.add-pet-form input[type="text"],
+.add-pet-form input[type="number"],
+.add-pet-form input[type="file"],
+.add-pet-form select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-pet-form input:focus,
+.add-pet-form select:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.2);
+}
+
+.add-pet-form button {
+  display: block;
+  width: 100%;
+  padding: 0.9rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #4f46e5, #4338ca);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-pet-form button:hover {
+  background: linear-gradient(90deg, #4338ca, #3730a3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79,70,229,0.4);
+}
+
+.pet-image-preview {
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  margin: 1rem auto 1.5rem auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pet-image-preview:hover {
+  transform: scale(1.05);
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: #4f46e5;
+  background: #e0e7ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #c7d2fe;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(79,70,229,0.3);
+}
+
+.upload-progress {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.progress-bar {
+  height: 6px;
+  background: linear-gradient(90deg, #7b68ee, #6a5adb);
+  transition: width 0.3s ease;
+}
+
+.upload-progress p {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  border-left: 4px solid #c33;
+}
+
+.pet-image-preview {
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px 0 20px 0;
+  display: block;
+}

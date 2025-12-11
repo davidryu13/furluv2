@@ -1,0 +1,147 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: #051649;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.navbar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Brand */
+.brand {
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  color: white !important;
+  text-decoration: none;
+}
+
+/* Left side (brand) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Right side */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Dashboard icons */
+.nav-icon {
+  font-size: 26px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-icon:hover {
+  transform: scale(1.2) rotate(10deg);
+  color: #ffcd39;
+  text-shadow: 0 0 8px rgba(255,205,57,0.8);
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 18px;
+  background: #002288;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #001766;
+  transform: scale(1.05);
+}
+
+.btn.small {
+  font-size: 14px;
+  padding: 6px 14px;
+}
+
+/* Profile dropdown */
+.profile-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  background: #0a1a3b;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  min-width: 160px;
+  overflow: hidden;
+  z-index: 2000;
+  animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background: #1b2a60;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .nav-icon {
+    font-size: 22px;
+  }
+}
+
+/* Search bar */
+.navbar-search {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  margin-right: 12px;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.navbar-search:focus {
+  box-shadow: 0 0 6px rgba(255, 205, 57, 0.6);
+  transform: scale(1.05);
+}
+

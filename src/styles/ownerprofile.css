@@ -1,0 +1,374 @@
+/* ===============================
+   OWNER PROFILE - POLISHED UI
+   =============================== */
+
+.owner-profile {
+  max-width: 900px;
+  margin: 35px auto;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+  padding-bottom: 45px;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  backdrop-filter: blur(6px);
+}
+
+/* Cover Photo */
+.cover-photo {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.1));
+  pointer-events: none;
+}
+
+.cover-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  filter: brightness(0.92);
+}
+
+.cover-photo img:hover {
+  transform: scale(1.06);
+}
+
+/* Avatar */
+.profile-avatar {
+  position: absolute;
+  top: 165px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: 0.35s ease;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.profile-avatar:hover {
+  transform: translateX(-50%) scale(1.07);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.32);
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Owner Details */
+.owner-info {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.owner-info h2 {
+  font-size: 30px;
+  color: #1e293b;
+  margin: 0;
+  letter-spacing: -0.5px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.owner-info h2:hover {
+  color: #4338ca;
+}
+
+.owner-info .club {
+  color: #4338ca;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.owner-info .location {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  margin-top: 28px;
+}
+
+.stats div {
+  text-align: center;
+}
+
+.stats h3 {
+  font-size: 22px;
+  color: #111827;
+  margin: 0;
+  font-weight: 700;
+}
+
+.stats p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Manage Documents */
+.manage-documents {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.manage-documents button {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 13px 32px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 16px rgba(79,70,229,0.35);
+}
+
+.manage-documents button:hover {
+  background: #4338ca;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Pets Section */
+.pets-section {
+  margin-top: 40px;
+  padding: 0 28px;
+}
+
+.pets-section h3 {
+  color: #1e293b;
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+/* Pets Grid */
+.pets-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+}
+
+.pet-card {
+  width: 130px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: 0.35s ease;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.16);
+}
+
+.pet-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #6366f1;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.pet-card img:hover {
+  transform: scale(1.07);
+}
+
+.pet-card p {
+  margin: 0;
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Add Pet */
+.pet-card.add-pet {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+}
+
+/* ===============================
+   CREATE POST - POLISHED
+   =============================== */
+
+.create-post {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 15px 20px;
+  margin: 28px 28px 0;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+  transition: 0.3s ease;
+}
+
+.create-post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+.create-post-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2.5px solid #6366f1;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.create-post-avatar:hover {
+  transform: scale(1.06);
+}
+
+.create-post-input {
+  flex: 1;
+  border-radius: 25px;
+  padding: 12px 18px;
+  font-size: 15px;
+  border: 1px solid #dbe2ff;
+  background: #f8fafc;
+  transition: 0.3s ease;
+}
+
+.create-post-input:focus {
+  border-color: #4f46e5;
+  background: white;
+  box-shadow: 0 0 8px rgba(79,70,229,0.35);
+}
+
+.attach-photo-btn {
+  background: #4f46e5;
+  color: white;
+  font-size: 20px;
+  padding: 10px 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.attach-photo-btn:hover {
+  background: #4338ca;
+  transform: scale(1.12);
+}
+
+/* ===============================
+   MODALS (Post popup, edit popup)
+   =============================== */
+
+.post-popup,
+.edit-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.25s ease;
+  z-index: 1000;
+}
+
+.post-content,
+.edit-content {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 22px;
+  padding: 28px 22px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+  animation: scaleIn 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Textarea */
+.post-content textarea,
+.edit-input {
+  border-radius: 16px;
+  border: 1px solid #cfd8ff;
+  background: #f8fafc;
+  padding: 12px 14px;
+  resize: none;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.post-content textarea:focus,
+.edit-input:focus {
+  background: #ffffff;
+  border-color: #4f46e5;
+  box-shadow: 0 0 8px rgba(79,70,229,0.35);
+}
+
+/* Modal Buttons */
+.post-actions button,
+.edit-actions button {
+  padding: 10px 18px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.post-actions button:last-child,
+.edit-actions button:last-child {
+  background: #4f46e5;
+  color: white;
+}
+
+.post-actions button:last-child:hover,
+.edit-actions button:last-child:hover {
+  background: #4338ca;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.94); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}

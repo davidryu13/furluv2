@@ -1,0 +1,389 @@
+/* Feed page background and padding */
+.feed-page {
+  background: linear-gradient(135deg, #e0f0ff, #ffffff);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Feed title styling */
+.feed-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #003366;
+  text-align: center;
+  margin-bottom: 24px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Container with consistent width, centered */
+.feed-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Post card with no animation or transition */
+.feed-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  cursor: pointer;
+
+  /* NO transition or animation */
+  opacity: 1;
+  transform: none;
+}
+
+.feed-card:hover {
+  /* NO hover effect */
+  transform: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.feed-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-bottom: 2px solid #e3eaf5;
+
+  /* NO transition */
+}
+
+/* Caption styling */
+.feed-caption {
+  padding: 16px 20px;
+}
+
+.feed-caption h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a2e6e;
+}
+
+.feed-caption p {
+  margin: 0;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.5;
+}
+
+/* Actions (heart/comment) */
+.feed-actions {
+  display: flex;
+  gap: 22px;
+  padding: 12px 20px;
+  font-size: 24px;
+  color: #666666;
+}
+
+.heart,
+.comment-icon {
+  cursor: pointer;
+
+  /* NO transition */
+}
+
+.heart:hover {
+  /* NO hover effect */
+  color: #e63946;
+  transform: none;
+}
+
+.heart.liked {
+  color: #e63946;
+
+  /* NO animation */
+}
+
+.comment-icon:hover {
+  /* NO hover effect */
+  color: #457b9d;
+  transform: none;
+}
+
+/* Comments section styling */
+.comment-section {
+  padding: 14px 20px;
+  border-top: 1px solid #eee;
+  background: #f9fbff;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Comment container flex */
+.comment {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: flex-start;
+  background: #e3eaf5;
+  border-radius: 14px;
+  padding: 8px 14px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+  /* NO animation */
+}
+
+/* Avatar style */
+.comment-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 3px rgba(0,0,0,0.15);
+}
+
+/* Comment body container */
+.comment-body {
+  flex-grow: 1;
+  position: relative;
+}
+
+/* Username */
+.comment-username {
+  font-weight: 700;
+  color: #1a2e6e;
+  margin-bottom: 4px;
+}
+
+/* Reaction buttons container */
+.comment-reactions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 16px;
+  color: #666;
+  position: relative;
+}
+
+/* Reaction button style */
+.comment-reaction-btn {
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #dbe9ff;
+  transition: none;
+  color: inherit;
+}
+
+.comment-reaction-btn:hover {
+  background-color: #b0d2ff;
+  color: #1a2e6e;
+}
+
+/* Reaction picker toggle button */
+.comment-reaction-picker-toggle {
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #dbe9ff;
+  user-select: none;
+  transition: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-reaction-picker-toggle:hover {
+  background-color: #b0d2ff;
+  color: #1a2e6e;
+}
+
+/* Reaction picker popup */
+.comment-reaction-picker {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  padding: 6px 10px;
+  display: flex;
+  gap: 8px;
+  z-index: 100;
+}
+
+.comment-reaction-picker-btn {
+  cursor: pointer;
+  font-size: 20px;
+  transition: none;
+  user-select: none;
+}
+
+.comment-reaction-picker-btn:hover {
+  transform: none;
+}
+
+/* Reply button */
+.comment-reply-btn {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #457b9d;
+  cursor: pointer;
+  user-select: none;
+  transition: none;
+}
+
+.comment-reply-btn:hover {
+  color: #1a2e6e;
+}
+
+/* Reply input container */
+.comment-reply-input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  gap: 8px;
+}
+
+/* Reply input field */
+.comment-input {
+  flex-grow: 1;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #dbe9ff;
+  font-size: 15px;
+  outline: none;
+  transition: none;
+}
+
+.comment-input:focus {
+  background: #b0d2ff;
+  box-shadow: none;
+}
+
+/* Send button */
+.comment-send-btn {
+  background-color: #1a2e6e;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: none;
+  white-space: nowrap;
+}
+
+.comment-send-btn:hover {
+  background-color: #457b9d;
+}
+
+/* Nested replies indentation */
+.comment-replies {
+  margin-left: 48px;
+  margin-top: 12px;
+  border-left: 2px solid #b0d2ff;
+  padding-left: 14px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .feed-container {
+    max-width: 95%;
+    padding: 0 10px;
+  }
+  .feed-title {
+    font-size: 24px;
+  }
+  .feed-actions {
+    font-size: 20px;
+  }
+}
+
+/* Message confirm modal styles */
+.message-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.message-confirm-modal {
+  background: white;
+  padding: 24px 36px;
+  border-radius: 16px;
+  max-width: 320px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.message-confirm-text {
+  font-size: 18px;
+  margin-bottom: 24px;
+  color: #003366;
+  font-weight: 600;
+}
+
+.message-confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* Message button - dark navy blue with white text */
+.btn-message {
+  background-color: #001f4d !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 12px 28px !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  transition: none !important;
+}
+
+.btn-message:hover,
+.btn-message:focus {
+  background-color: #003366 !important;
+  outline: none !important;
+}
+
+/* Cancel button - gray background and black text forced */
+.btn-cancel {
+  background-image: none !important;   /* REMOVE any gradient background */
+  background: #ccc !important;         /* Solid gray */
+  color: #000 !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 12px 28px !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  transition: none !important;
+  box-shadow: none !important;         /* REMOVE any shadow */
+}
+
+.btn-cancel:hover,
+.btn-cancel:focus {
+  background-image: none !important;
+  background: #ccc !important;
+  color: #000 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}

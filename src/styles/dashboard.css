@@ -1,0 +1,43 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* Dashboard layout without sidebar/right panel */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Main content under navbar */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Feed / posts sections */
+.feed, .pet-profile, .listings, .transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post-card, .pet-card, .listing-card, .transaction-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.post-card h2, .pet-card h2, .listing-card h2, .transaction-card h2 {
+  margin: 0 0 10px 0;
+  color: #4f46e5;
+}
+
+.post-card p, .pet-card p, .listing-card p, .transaction-card p {
+  margin: 0;
+  color: #374151;
+}
